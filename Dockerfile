@@ -8,6 +8,8 @@ RUN apk add --update --no-cache \
     php7-pdo_mysql \
     php7-pdo_sqlite \
     php7-mcrypt \
+    php7-mbstring \
+    php7-ctype \
     php7-json \
     php7-opcache \
     php7-fpm \
