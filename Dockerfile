@@ -20,6 +20,7 @@ RUN apk add --update --no-cache \
     php-phar \
     php-zlib \
     php-openssl \
+    php-xml \
     openssl \
     docker && \
     wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
