@@ -9,6 +9,7 @@ RUN apk add --update --no-cache \
     php-mcrypt \
     php-ctype \
     php-json \
+    php-gd \
     php-opcache \
     php-fpm \
     php-mysqli \
