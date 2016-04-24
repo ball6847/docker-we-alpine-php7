@@ -21,7 +21,6 @@ RUN apk add --update --no-cache \
     php-openssl \
     openssl \
     docker && \
-    ln -s /usr/bin/php /usr/bin/php && \
     wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     addgroup -g 82 -S www-data && adduser -u 82 -D -S -G www-data www-data
 
