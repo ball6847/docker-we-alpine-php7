@@ -21,6 +21,7 @@ RUN apk add --update --no-cache \
     php7-phar \
     php7-zlib \
     php7-openssl \
+    php7-session \
     openssl \
     docker && \
     ln -s /usr/bin/php7 /usr/bin/php && \
