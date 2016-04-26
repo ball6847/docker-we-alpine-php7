@@ -7,6 +7,7 @@ RUN apk add --update --no-cache \
     php7-pdo \
     php7-pdo_mysql \
     php7-pdo_sqlite \
+    php7-gd \
     php7-mcrypt \
     php7-mbstring \
     php7-ctype \
@@ -22,6 +23,7 @@ RUN apk add --update --no-cache \
     php7-zlib \
     php7-openssl \
     php7-session \
+    php7-xml \
     openssl \
     docker && \
     ln -s /usr/bin/php7 /usr/bin/php && \
