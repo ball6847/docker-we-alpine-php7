@@ -1,6 +1,8 @@
 FROM alpine:edge
 MAINTAINER ball6847@gmail.com
 
+ENV DOCKER_API_VERSION=1.22
+
 RUN apk add --update --no-cache \
     --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     php7-zip \
