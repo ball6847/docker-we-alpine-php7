@@ -27,7 +27,7 @@ RUN apk add --update --no-cache \
     php7-session \
     php7-xml \
     openssl \
-    docker
+    docker \
     py-pip && \
     pip install docker-compose && \
     ln -s /usr/bin/php7 /usr/bin/php && \
