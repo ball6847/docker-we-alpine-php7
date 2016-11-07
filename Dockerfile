@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.3
 MAINTAINER ball6847@gmail.com
 
 RUN apk add --update --no-cache \
