@@ -6,13 +6,14 @@ RUN apk add --update --no-cache \
     php-pdo \
     php-pdo_mysql \
     php-pdo_sqlite \
+    php-mysqli \
+    php-sqlite3 \
     php-mcrypt \
     php-ctype \
     php-json \
     php-gd \
     php-opcache \
     php-fpm \
-    php-mysqli \
     php-curl \
     php-dom \
     php-intl \
