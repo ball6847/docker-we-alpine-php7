@@ -8,4 +8,9 @@ if [[ "$ENABLED_XDEBUG" != "" ]]; then
     ln -s /etc/php5/conf.d/xdebug.ini /etc/php/conf.d/xdebug.ini
 fi
 
-exec php-fpm
+if [[ "$#" -gt 0 ]]; then
+    exec php "$@"
+else
+    exec php-fpm
+fi
+

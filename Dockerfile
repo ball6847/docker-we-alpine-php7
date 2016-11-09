@@ -1,6 +1,8 @@
 FROM alpine:3.3
 MAINTAINER ball6847@gmail.com
 
+WORKDIR /var/www
+
 RUN apk add --update --no-cache --force \
     --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
     php-zip \
@@ -32,5 +34,7 @@ RUN apk add --update --no-cache --force \
 ADD xdebug.ini /etc/php5/conf.d/
 ADD conf/ /etc/php/
 ADD entrypoint.sh /entrypoint.sh
+
+EXPOSE 9000
 
 ENTRYPOINT ["/entrypoint.sh"]
