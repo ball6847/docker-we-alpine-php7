@@ -27,6 +27,7 @@ RUN apk add --update --no-cache --force \
     php-xml \
     php5-xdebug@edge \
     openssl \
+    git \
     docker && \
     wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     addgroup -g 82 -S www-data && adduser -u 82 -D -S -G www-data www-data
