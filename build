@@ -1,4 +1,4 @@
 #!/bin/sh
 
-docker build -t ball6847/we-alpine-php7:7.1 --compress --rm .
-docker tag ball6847/we-alpine-php7:7.1 ball6847/we-alpine-php7:latest
+docker build -t ball6847/we-alpine-php7:7.1.9 --compress --rm .
+docker tag ball6847/we-alpine-php7:7.1.9 ball6847/we-alpine-php7:latest

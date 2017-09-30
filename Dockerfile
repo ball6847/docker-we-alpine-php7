@@ -27,6 +27,7 @@ RUN apk add --update --no-cache \
         php7-openssl==$PHP_VERSION \
         php7-session==$PHP_VERSION \
         php7-xml==$PHP_VERSION \
+        php7-fileinfo=$PHP_VERSION \
     && wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
     && wget -qO- https://raw.githubusercontent.com/Eficode/wait-for/master/wait-for > /usr/bin/wait-for \
     && chmod +x /usr/bin/wait-for \
