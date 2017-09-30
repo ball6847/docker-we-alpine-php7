@@ -1,38 +1,37 @@
 FROM alpine:edge
-MAINTAINER ball6847@gmail.com
+MAINTAINER Porawit Poboonma <ball6847@gmail.com>
 
-ENV DOCKER_API_VERSION=1.22
+ENV PHP_VERSION 7.1.9-r1
 
 RUN apk add --update --no-cache \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    php7-zip \
-    php7-pdo \
-    php7-pdo_mysql \
-    php7-pdo_sqlite \
-    php7-gd \
-    php7-mcrypt \
-    php7-mbstring \
-    php7-ctype \
-    php7-json \
-    php7-opcache \
-    php7-fpm \
-    php7-mysqli \
-    php7-curl \
-    php7-dom \
-    php7-intl \
-    php7-iconv \
-    php7-phar \
-    php7-zlib \
-    php7-openssl \
-    php7-session \
-    php7-xml \
-    openssl \
-    docker \
-    py-pip && \
-    pip install docker-compose && \
-    ln -s /usr/bin/php7 /usr/bin/php && \
-    wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
-    addgroup -g 82 -S www-data && adduser -u 82 -D -S -G www-data www-data
+        --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
+        php7==$PHP_VERSION \
+        php7-zip==$PHP_VERSION \
+        php7-pdo==$PHP_VERSION \
+        php7-pdo_mysql==$PHP_VERSION \
+        php7-pdo_sqlite==$PHP_VERSION \
+        php7-gd==$PHP_VERSION \
+        php7-mcrypt==$PHP_VERSION \
+        php7-mbstring==$PHP_VERSION \
+        php7-ctype==$PHP_VERSION \
+        php7-json==$PHP_VERSION \
+        php7-opcache==$PHP_VERSION \
+        php7-fpm==$PHP_VERSION \
+        php7-mysqli==$PHP_VERSION \
+        php7-curl==$PHP_VERSION \
+        php7-dom==$PHP_VERSION \
+        php7-intl==$PHP_VERSION \
+        php7-iconv==$PHP_VERSION \
+        php7-phar==$PHP_VERSION \
+        php7-zlib==$PHP_VERSION \
+        php7-openssl==$PHP_VERSION \
+        php7-session==$PHP_VERSION \
+        php7-xml==$PHP_VERSION \
+    && wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
+    && wget -qO- https://raw.githubusercontent.com/Eficode/wait-for/master/wait-for > /usr/bin/wait-for \
+    && chmod +x /usr/bin/wait-for \
+    && addgroup -g 82 -S www-data && adduser -u 82 -D -S -G www-data www-data \
+    && rm -rf /var/cache/apk/*
 
 ADD conf/ /etc/php7/
 
